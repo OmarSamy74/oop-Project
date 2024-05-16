@@ -15,7 +15,7 @@ char Menu::getDelivery() {
         return 'Y';
     }
     else {
-        cout << "Invalid input\n";
+        cout << "Invalid input";
         return getDelivery();
     }
 }
