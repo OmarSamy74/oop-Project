@@ -8,7 +8,7 @@ char Menu::getDelivery() {
     cout << "Do you want home delivery?\nPress 'N' for dine-in and 'Y' for delivery\n";
     cin >> delivery;
 
-    if (delivery == 'N' || delivery != 'n') {
+    if (delivery == 'N' || delivery == 'n') {
         return 'N';
     }
     else if (delivery == 'Y' || delivery == 'y') {

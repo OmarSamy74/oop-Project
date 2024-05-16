@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\maria\\Documents\\GitHub\\oop-Project\\",
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\GitHub\\oop-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0BBE4CF8-8C1E-4004-8858-CD730FA9BC7C}|Project1\\Project1.vcxproj|C:\\Users\\maria\\Documents\\GitHub\\oop-Project\\Project1\\Menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{0BBE4CF8-8C1E-4004-8858-CD730FA9BC7C}|Project1\\Project1.vcxproj|C:\\Users\\ASUS\\Documents\\GitHub\\oop-Project\\Project1\\Menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0BBE4CF8-8C1E-4004-8858-CD730FA9BC7C}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,9 +20,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Menu.cpp",
-              "DocumentMoniker": "C:\\Users\\maria\\Documents\\GitHub\\oop-Project\\Project1\\Menu.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\oop-Project\\Project1\\Menu.cpp",
               "RelativeDocumentMoniker": "Project1\\Menu.cpp",
-              "ToolTip": "C:\\Users\\maria\\Documents\\GitHub\\oop-Project\\Project1\\Menu.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\oop-Project\\Project1\\Menu.cpp",
               "RelativeToolTip": "Project1\\Menu.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
