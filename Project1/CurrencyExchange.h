@@ -1,40 +1,32 @@
 #ifndef CURRENCYEXCHANGE_H
 #define CURRENCYEXCHANGE_H
 
-#include "CreditCard.h" // Include the base class header
+#include "CreditCard.h" // base class header
 
 class CurrencyExchange : public CreditCard {
+
 private:
-    // Fixed exchange rates for different currencies
+
     double egpToUsdRate;
     double egpToEurRate;
     double egpToCadRate;
 
 public:
-    // Constructor with exchange rates
+
     CurrencyExchange(double egpToUsd, double egpToEur, double egpToCad)
-        : egpToUsdRate(egpToUsd), egpToEurRate(egpToEur), egpToCadRate(egpToCad) {}
+    : egpToUsdRate(egpToUsd), egpToEurRate(egpToEur), egpToCadRate(egpToCad){}
 
-    // Function to exchange EGP to USD
-    double egpToUsd(double amountEGP) const {
-        return amountEGP * egpToUsdRate;
-    }
 
-    // Function to exchange EGP to EUR
-    double egpToEur(double amountEGP) const {
-        return amountEGP * egpToEurRate;
-    }
+    double egpToUsd(double amountEGP);
 
-    // Function to exchange EGP to CAD
-    double egpToCad(double amountEGP) const {
-        return amountEGP * egpToCadRate;
-    }
 
-    // Function to perform currency exchange and update balance
-    void exchangeAndAddToBalance(double amountEGP, double exchangeRate) {
-        double amountInTargetCurrency = amountEGP * exchangeRate;
-        balance += amountInTargetCurrency;
-    }
+    double egpToEur(double amountEGP);
+
+    double egpToCad(double amountEGP);
+
+
+    void exchangeAndAddToBalance(double amountEGP, double exchangeRate);
+
 };
 
-#endif // CURRENCYEXCHANGE_H
+#endif

@@ -1,7 +1,5 @@
 #include "Menu.h"
 
-using namespace std;
-
 Menu::Menu() : delivery('N'), address(new DeliveryAddress()) {}
 
 char Menu::getDelivery() {

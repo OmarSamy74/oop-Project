@@ -1,4 +1,4 @@
-#include "C:\Users\DELL\OneDrive\Desktop\baladina\Project1\Project1\Restaurant.h"
+#include "Restaurant.h"
 
 Restaurant::Restaurant(const std::string& name, const std::string& address, const std::string& cuisine, int capacity)
     : name(name), address(address), cuisine(cuisine), capacity(capacity), freeTablesNumbers(), freeTablesNames() {

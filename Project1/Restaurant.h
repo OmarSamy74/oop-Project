@@ -4,30 +4,31 @@
 #include <iostream>
 #include <string>
 #include <vector>
+using namespace std;
 
 class Restaurant {
 private:
-    std::string name;
-    std::string address;
-    std::string cuisine;
+    string name;
+    string address;
+    string cuisine;
     int capacity;
-    std::vector<int> freeTablesNumbers;
-    std::vector<std::string> freeTablesNames;
+    vector<int> freeTablesNumbers;
+    vector<string> freeTablesNames;
 
 public:
-    Restaurant(const std::string& name, const std::string& address, const std::string& cuisine, int capacity);
+    Restaurant(const string& name, const string& address, const string& cuisine, int capacity);
 
-    void setName(const std::string& nName);
-    void setAddress(const std::string& nAddress);
+    void setName(const string& nName);
+    void setAddress(const string& nAddress);
     void setCapacity(int nCapacity);
 
-    std::string getName() const;
-    std::string getAddress() const;
-    std::string getCuisine() const;
+    string getName() const;
+    string getAddress() const;
+    string getCuisine() const;
     int getCapacity() const;
 
-    void addFreeTable(int tableNumber, const std::string& tableName);
+    void addFreeTable(int tableNumber, const string& tableName);
     void displayFreeTables() const;
 };
 
-#endif // RESTAURANT_H
+#endif

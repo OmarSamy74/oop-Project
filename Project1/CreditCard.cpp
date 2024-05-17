@@ -1,5 +1,5 @@
 #include "CreditCard.h"
-using namespace std;
+
 
 CreditCard::CreditCard() : balance(0) {}
 

@@ -3,10 +3,11 @@
 
 #include <iostream>
 #include <vector>
+using namespace std;
 
 class TicTacToe {
 private:
-    std::vector<std::vector<char>> board;
+    vector<vector<char>> board;
     char currentPlayer;
 
 public:

@@ -53,21 +53,27 @@ void Customer::PersonalInfo_edit() {
     int change;
 
     cout << "What would you like to change?\n"
-        << "1. Name\n2. Gender\n3. Age\n";
+        << "1. Name\n2. Gender\n3. Age\n4.Exit";
     cin >> change;
 
-    switch (change) {
-    case 1:
-        setName();
-        break;
-    case 2:
-        setGender();
-        break;
-    case 3:
-        setAge();
-        break;
-    default:
-        cout << "Invalid input\n";
+    while (true){
+        
+        switch (change) {
+        case 1:
+            setName();
+            
+        case 2:
+            setGender();
+            
+        case 3:
+            setAge();
+            
+        case 4:
+            cout<< "Exiting...";
+            break;
+        default:
+            cout << "Invalid input\n";
+        }
     }
 }
 

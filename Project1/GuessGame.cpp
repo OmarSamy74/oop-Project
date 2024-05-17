@@ -1,7 +1,4 @@
 #include "GuessGame.h"
-#include <iomanip> // for setw and setprecision
-
-using namespace std;
 
 Guess_Game::Guess_Game()
     : score(0), questionIndex(0), optionIndex(0), size(NUM_QUESTIONS) {

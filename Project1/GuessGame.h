@@ -6,18 +6,21 @@
 #include <fstream>
 #include <cctype> // for toupper
 #include <iomanip> // for setw and setprecision
+using namespace std;
 
 class Guess_Game {
+
 private:
+
     static const int NUM_QUESTIONS = 4;
     static const int NUM_OPTIONS = 4;
 
-    std::string questions[NUM_QUESTIONS];
-    std::string options[NUM_QUESTIONS][NUM_OPTIONS];
+    string questions[NUM_QUESTIONS];
+    string options[NUM_QUESTIONS][NUM_OPTIONS];
     char answerKey[NUM_QUESTIONS];
 
     int score;
-    std::string line;
+    string line;
 
     int questionIndex;
     int optionIndex;
@@ -26,7 +29,7 @@ private:
     int size;
 
     // file opening
-    void loadQuestionsFromFile(const std::string& filename);
+    void loadQuestionsFromFile(const string& filename);
 
     void startQuiz();
 
@@ -35,7 +38,7 @@ public:
     Guess_Game();
 
     // constructor
-    Guess_Game(std::string filename);
+    Guess_Game(string filename);
 
     void playQuiz();
 };

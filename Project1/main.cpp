@@ -1,107 +1,92 @@
-#ifndef CUSTOMER_H
-#define CUSTOMER_H
+#include "Customer.h"
+#include "CreditCard.h"
+#include "GuessGame.h"
+#include "TicTacToe.h"
+#include "Restaurant.h"
+#include "Menu.h"
+#include "Event.h"
 
-#include <iostream>
-#include <string>
-#include <vector>
-#include <random>
-#include <ctime>
-#include <cctype>
+int main(){
 
-using namespace std;
+    Event event;
+    event.clearTerminal();
 
-class Customer {
-private:
-    string name;
-    short age;
-    char gender;
-    vector<double> loyalty_points;
-    double ID;
+    Restaurant restaurant("Baladina", "123 On the main street in Zewail City", "Zewailiany", 50); // capacity = 50
 
-public:
-    void First_time() {
-        setName();
-        setAge();
-        setGender();
-        setID();
-        cout << "Name: " << name << "\nAge: " << age << "\nGender: " << gender << "\n\n";
-    }
+    restaurant.addFreeTable(1, "Table 1");
+    restaurant.addFreeTable(2, "Table 2");
+    restaurant.addFreeTable(3, "Table 3");
 
-    void setName() {
-        cin.ignore();  // clear input buffer
-        cout << "Enter your full name: ";
-        getline(cin, name);
-    }
 
-    void setAge() {
-        cout << "Enter your age: ";
-        cin >> age;
-    }
+    cout << "Restaurant Information\n";
+    cout << "Name: " << restaurant.getName() << "\n";
+    cout << "Address: " << restaurant.getAddress() << "\n";
+    cout << "Cuisine: " << restaurant.getCuisine() << "\n";
+    cout << "Capacity: " << restaurant.getCapacity() << "\n";
+    restaurant.displayFreeTables();
 
-    void setGender() {
-        cout << "M - Male\nF - Female\nYour choice: ";
-        cin >> gender;
-        gender = toupper(gender);  // convert input into uppercase
 
-        if (gender != 'M' && gender != 'F') {
-            throw invalid_argument("Invalid input! Please try again.");
-        }
-    }
+    Menu menu;
 
-    void setID() {
-        default_random_engine generator(static_cast<unsigned int>(time(0)));
-        uniform_int_distribution<unsigned int> distribution(1, 99999);
-        ID = distribution(generator);
-        cout << "\nYour unique ID is: " << ID << endl;
-    }
 
-    void addLoyaltyPoints(int numPoints) {
-        default_random_engine generator(static_cast<unsigned int>(time(0)));
-        uniform_int_distribution<unsigned int> distribution(1, 99999);
-        int points = distribution(generator);
-        loyalty_points.push_back(points);
-    }
+    menu.addDish("Pizza");
+    menu.addDish("French fries");
+    menu.addDish("Steak");
+    menu.addDish("White Sauce Pasta");
 
-    void PersonalInfo_edit() {
-        int change;
-        cout << "What would you like to change?\n"
-            << "1. Name\n2. Gender\n3. Age\n";
-        cin >> change;
 
-        switch (change) {
-        case 1:
-            setName();
-            break;
-        case 2:
-            setGender();
-            break;
-        case 3:
-            setAge();
-            break;
-        default:
-            cout << "Invalid input";
-        }
-    }
+    //menu.displayMenu();
 
-    string getName() const {
-        return name;
-    }
+    char choice;
+    bool condition = true;
 
-    short getAge() const {
-        return age;
-    }
+    CreditCard card;
+    Customer test;
+    vector<Customer> customers;
+    
 
-    char getGender() const {
-        return gender;
-    }
+    do {
 
-    double getID() const {
-        return ID;
-    }
+        event.startup();
+        cin >> choice;
 
-    const vector<double>& getLoyaltyPoints() const {
-        return loyalty_points;
-    }
-};
+        switch (choice) {
 
-#endif
+            case '1':
+
+                card.menu();
+                
+
+            case '2':
+
+                test.First_time();
+                customers.push_back(test);
+                
+
+            case '3':
+
+                test.PersonalInfo_edit();
+                
+
+            case '4':
+
+                cout << "Order\n";
+                menu.placeOrder();  
+                
+
+            case 'q':
+                cout << "Exiting...\n";
+                event.clearTerminal();
+                condition = false;
+                break;
+
+            default:
+                cout << "\nInvalid choice. Please try again.\n\n";
+            }
+
+        } while (condition == true);
+
+        event.save_data(customers);
+
+        return 0;
+}

@@ -1,23 +1,28 @@
-#ifndef EVENT_H
-#define EVENT_H
-
+#ifndef Event_H
+#define Event_H
 #include "Customer.h"
 #include "GuessGame.h"
 #include "Menu.h"
 #include "TicTacToe.h"
-#include <vector>
-#include <fstream>
-#include <iostream>
-#include <algorithm>
 
-void rush();
+class Event{
 
-void clearTerminal();
+    private:
+    
+    int choice;
+    Guess_Game player;
+    TicTacToe game;
+    Menu menu;
+    string recommendation;
 
-void startup();
+    public:
 
-void save_data(const std::vector<Customer>& customers);
+    Event();
+    void rush();
+    void clearTerminal();
+    void startup();
+    void save_data(vector<Customer>customers);
+    void waiting();
 
-void waiting();
-
-#endif // EVENT_H
+};
+#endif

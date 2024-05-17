@@ -1,6 +1,6 @@
-#include "C:\Users\DELL\OneDrive\Desktop\baladina\Project1\Project1\TicTacToe.h"
+#include "TicTacToe.h"
 
-using namespace std;
+
 
 TicTacToe::TicTacToe() : board(3, vector<char>(3, ' ')), currentPlayer('X') {}
 
