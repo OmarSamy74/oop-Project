@@ -1,13 +1,8 @@
-﻿  CreditCard.cpp
-  Customer.cpp
-  Event.cpp
+﻿  Event.cpp
   GuessGame.cpp
-  main.cpp
-  Menu.cpp
-  Menu.h
-  Restaurant.cpp
+C:\Users\maria\Documents\GitHub\oop-Project\Project1\Event.cpp(2,12): error C2011: 'Event': 'class' type redefinition
+  C:\Users\maria\Documents\GitHub\oop-Project\Project1\Event.h(8,7):
+  see declaration of 'Event'
+  
   TicTacToe.cpp
   Generating Code...
-x64\Debug\Menu.obj : warning LNK4042: object specified more than once; extras ignored
-MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-C:\Users\DELL\OneDrive\Desktop\baladina\Project1\x64\Debug\Project1.exe : fatal error LNK1120: 1 unresolved externals
