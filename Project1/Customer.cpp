@@ -1,7 +1,5 @@
 #include "Customer.h"
 
-using namespace std;
-
 void Customer::First_time() {
     setName();
     setAge();
@@ -34,16 +32,19 @@ void Customer::setGender() {
 }
 
 void Customer::setID() {
-    default_random_engine generator(static_cast<unsigned int>(time(0)));
-    uniform_int_distribution<unsigned int> distribution(1, 99999);
-
-    ID = distribution(generator);
+    nextID= 0;
+    if (nextID <= 100000) {
+        ID = nextID++;
+    } else {
+        cerr << "Error: No more available IDs.\n";
+        ID = 0;
+    }
     cout << "\nYour unique ID is: " << ID << endl;
 }
 
 void Customer::addLoyaltyPoints(int numPoints) {
     default_random_engine generator(static_cast<unsigned int>(time(0)));
-    uniform_int_distribution<unsigned int> distribution(1, 99999);
+    uniform_int_distribution<unsigned int> distribution(1, 100);
 
     int points = distribution(generator);
     loyalty_points.push_back(points);

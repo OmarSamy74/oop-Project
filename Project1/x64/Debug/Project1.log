@@ -1,8 +1,37 @@
-﻿  Event.cpp
+﻿  CreditCard.cpp
+  Customer.cpp
+  Event.cpp
   GuessGame.cpp
-C:\Users\maria\Documents\GitHub\oop-Project\Project1\Event.cpp(2,12): error C2011: 'Event': 'class' type redefinition
-  C:\Users\maria\Documents\GitHub\oop-Project\Project1\Event.h(8,7):
-  see declaration of 'Event'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\yvals.h(20,10): error C1083: Cannot open include file: 'crtdbg.h': No such file or directory
+  (compiling source file 'CreditCard.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\yvals.h(20,10): error C1083: Cannot open include file: 'crtdbg.h': No such file or directory
+  (compiling source file 'Customer.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\yvals.h(20,10): error C1083: Cannot open include file: 'crtdbg.h': No such file or directory
+  (compiling source file 'Event.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\yvals.h(20,10): error C1083: Cannot open include file: 'crtdbg.h': No such file or directory
+  (compiling source file 'GuessGame.cpp')
+  
+  main.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\yvals.h(20,10): error C1083: Cannot open include file: 'crtdbg.h': No such file or directory
+  (compiling source file 'main.cpp')
+  
+  Menu.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\yvals.h(20,10): error C1083: Cannot open include file: 'crtdbg.h': No such file or directory
+  (compiling source file 'Menu.cpp')
+  
+  Menu.h
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\yvals.h(20,10): error C1083: Cannot open include file: 'crtdbg.h': No such file or directory
+  (compiling source file 'Menu.h')
+  
+  Restaurant.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\yvals.h(20,10): error C1083: Cannot open include file: 'crtdbg.h': No such file or directory
+  (compiling source file 'Restaurant.cpp')
   
   TicTacToe.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\yvals.h(20,10): error C1083: Cannot open include file: 'crtdbg.h': No such file or directory
+  (compiling source file 'TicTacToe.cpp')
+  
   Generating Code...

@@ -1,6 +1,41 @@
 #include "Menu.h"
 
-Menu::Menu() : delivery('N'), address(new DeliveryAddress()) {}
+Menu::Menu() : name(""), dishes({}) {}
+
+Menu::Menu(const string& name, const vector<Dish>& dishes) : name(name), dishes(dishes) {}
+
+Menu::Menu(const string& filename) : name(""), dishes({}) {
+    ifstream file(filename);
+    if (!file.is_open()) {
+        cerr << "Error: Unable to open file " << filename << std::endl;
+        return;
+    }
+
+    string line;
+    while (getline(file, line)) {
+        istringstream iss(line);
+        string name;
+        double price;
+
+        // Split line into name and price
+        size_t last_space = line.find_last_of(" ");
+        if (last_space == string::npos) {
+            continue; // Invalid format
+        }
+
+        name = line.substr(0, last_space);
+        try {
+            price = stod(line.substr(last_space + 1));
+        }
+        catch (const invalid_argument&) {
+            continue; // Invalid price format
+        }
+
+        dishes.push_back(Dish{name, price});
+    }
+
+    file.close();
+}
 
 char Menu::getDelivery() {
     cout << "Do you want home delivery?\nPress 'N' for dine-in and 'Y' for delivery\n";
@@ -20,10 +55,6 @@ char Menu::getDelivery() {
 
 vector<string> Menu::getDishes() const {
     return dishes;
-}
-
-void Menu::addDish(const string& dish) {
-    dishes.push_back(dish);
 }
 
 void Menu::displayMenu() const {
@@ -54,7 +85,8 @@ void Menu::placeOrder() {
     cout << "Enter your order (one item per line, type 'done' to finish):\n";
 
     while (true) {
-        cin >> item;
+        cin.ignore(); // Clear the input buffer
+        getline(cin, item);
         transform(item.begin(), item.end(), item.begin(), ::toupper);
 
         if (item == "DONE")
@@ -76,7 +108,7 @@ void Menu::placeOrder() {
 
     if (delivery == 'Y' || delivery == 'y') {
         cout << "While waiting, what do you want to do?";
-        waiting();
+        waiting(); // Assuming waiting() is defined elsewhere
     }
 
     cout << "Your order will be delivered to:\n";

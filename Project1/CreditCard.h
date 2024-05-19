@@ -1,6 +1,4 @@
-#ifndef CREDITCARD_H
-#define CREDITCARD_H
-
+#pragma once
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -19,10 +17,8 @@ protected:
 
 public:
 
-    CreditCard(); // Constructor with no arguments
+    CreditCard(); // default constructor
 
     void menu();
 
 };
-
-#endif // CREDITCARD_H

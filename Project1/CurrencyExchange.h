@@ -1,6 +1,4 @@
-#ifndef CURRENCYEXCHANGE_H
-#define CURRENCYEXCHANGE_H
-
+#pragma once
 #include "CreditCard.h" // base class header
 
 class CurrencyExchange : public CreditCard {
@@ -28,5 +26,3 @@ public:
     void exchangeAndAddToBalance(double amountEGP, double exchangeRate);
 
 };
-
-#endif

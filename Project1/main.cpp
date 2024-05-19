@@ -29,13 +29,7 @@ int main(){
     Menu menu;
 
 
-    menu.addDish("Pizza");
-    menu.addDish("French fries");
-    menu.addDish("Steak");
-    menu.addDish("White Sauce Pasta");
-
-
-    //menu.displayMenu();
+    menu.addDish("dishes.txt");
 
     char choice;
     bool condition = true;

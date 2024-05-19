@@ -1,6 +1,4 @@
-#ifndef TICTACTOE_H
-#define TICTACTOE_H
-
+#pragma once
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -20,5 +18,3 @@ public:
     void switchPlayer();
     void playTicTacToe();
 };
-
-#endif // TICTACTOE_H

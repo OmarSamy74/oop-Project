@@ -1,6 +1,4 @@
-#ifndef GUESSGAME_H
-#define GUESSGAME_H
-
+#pragma once
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -42,5 +40,3 @@ public:
 
     void playQuiz();
 };
-
-#endif // GUESSGAME_H

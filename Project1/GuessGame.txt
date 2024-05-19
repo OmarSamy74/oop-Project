@@ -1,0 +1,27 @@
+#What year was C++ created?
+A. 1969
+B. 1975
+C. 1985
+D. 1989
+*Answer: C
+
+#Who invented C++?
+A. Guido van Rossum
+B. Bjarne Stroustrup
+C. John Carmack
+D. Mark Zuckerburg
+*Answer: B
+
+#What is the predecessor of C++?
+A. C
+B. C+
+C. C--
+D. B++
+*Answer: A
+
+#Is the Earth flat?
+A. yes
+B. no
+C. sometimes
+D. what's Earth?
+*Answer: B

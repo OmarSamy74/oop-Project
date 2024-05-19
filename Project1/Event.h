@@ -1,5 +1,4 @@
-#ifndef Event_H
-#define Event_H
+#pragma once
 #include "Customer.h"
 #include "GuessGame.h"
 #include "Menu.h"
@@ -25,4 +24,3 @@ class Event{
     void waiting();
 
 };
-#endif

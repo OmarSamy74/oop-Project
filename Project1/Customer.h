@@ -1,6 +1,4 @@
-#ifndef CUSTOMER_H
-#define CUSTOMER_H
-
+#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
@@ -18,6 +16,7 @@ private:
     char gender;
     vector<double> loyalty_points;
     double ID;
+    static unsigned int nextID; 
 
 public:
 
@@ -38,5 +37,3 @@ public:
     double getID() const;
     const vector<double>& getLoyaltyPoints() const;
 };
-
-#endif // CUSTOMER_H

@@ -1,7 +1,6 @@
-#ifndef MENU_H
-#define MENU_H
-
+#pragma once
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <algorithm>
 #include <string>
@@ -14,11 +13,15 @@ class Menu {
 
 private:
     vector<string> dishes;
+    string dish;
     vector<string> customerMenu;
     char delivery;
     vector<string> order;
     string item;
     DeliveryAddress* address;
+    static string name;
+    string name;
+    vector<string> dishes;
 
 public:
     Menu(); // default constructor
@@ -57,5 +60,3 @@ public:
 };
 
 void waiting();
-
-#endif

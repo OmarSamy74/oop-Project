@@ -29,7 +29,7 @@ void CreditCard::menu() {
             withdraw();
             break;
         case 4:
-            cout << "Thanks for visiting!\n";
+            cout << endl;
             break;
         default:
             cout << "Invalid choice\n";

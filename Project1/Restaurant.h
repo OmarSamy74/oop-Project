@@ -1,6 +1,4 @@
-#ifndef RESTAURANT_H
-#define RESTAURANT_H
-
+#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
@@ -30,5 +28,3 @@ public:
     void addFreeTable(int tableNumber, const string& tableName);
     void displayFreeTables() const;
 };
-
-#endif
